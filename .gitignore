@@ -1,0 +1,28 @@
+# Dependencias y build
+node_modules/
+dist/
+dist-ssr/
+coverage/
+*.local
+
+# Variables de entorno (se versiona solo .env.example)
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Editor / SO
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.sw?
+
+# Contexto local de Claude Code
+CLAUDE.md
+.claude/

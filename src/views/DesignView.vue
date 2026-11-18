@@ -8,6 +8,7 @@ import isotipo from '@/assets/figma/isotipo-libreta.svg'
 import checkAcento from '@/assets/figma/check-acento.svg'
 import logoPng from '@/assets/figma/logo-fiadoclaro.png'
 import { formatDate, formatDateTime, formatMoney, formatRate } from '@/utils/format'
+import ComponentsDemo from './design/ComponentsDemo.vue'
 
 interface Muestra {
   clase: string // clase de Tailwind
@@ -256,6 +257,9 @@ const formatos = [
           </table>
         </div>
       </section>
+
+      <!-- Fase 3: componentes base -->
+      <ComponentsDemo />
     </main>
   </div>
 </template>

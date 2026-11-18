@@ -1,8 +1,9 @@
 <script setup lang="ts">
-// Componente raíz: solo muestra la vista de la ruta actual.
-// Los layouts por rol (admin, tienda, cliente) llegan en la fase 2.
+// Componente raíz: la vista de la ruta actual (con su layout) y los mensajes emergentes (toasts).
+import ToastHost from '@/components/ui/ToastHost.vue'
 </script>
 
 <template>
   <RouterView />
+  <ToastHost />
 </template>

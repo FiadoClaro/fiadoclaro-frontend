@@ -7,6 +7,16 @@
  */
 export type VarianteCampo = 'blanco' | 'relleno'
 
+/** Resultado de SearchSelect (buscador con lista). */
+export interface ResultadoBusqueda<V> {
+  valor: V
+  /** Texto principal ("Rosa Flores Benites") */
+  texto: string
+  /** Texto secundario ("DNI 08765432") */
+  detalle?: string
+  deshabilitado?: boolean
+}
+
 /** Opción de SelectInput y SegmentedToggle. */
 export interface Opcion<V extends string | number> {
   value: V

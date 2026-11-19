@@ -131,6 +131,12 @@ export function formatDateTime(valor: string | null | undefined): string {
   return `${p.day}/${p.month}/${p.year} ${p.hour}:${p.minute}`
 }
 
+/** Fecha de hoy en Lima como "YYYY-MM-DD" (para comparar con fechas del backend). */
+export function hoyLima(ahora: Date = new Date()): string {
+  const p = partesEnLima(ahora)
+  return `${p.year}-${p.month}-${p.day}`
+}
+
 /** Hora "HH:mm:ss" del backend (p. ej. la hora de corte) como "HH:mm". */
 export function formatTime(valor: string | null | undefined): string {
   const m = valor ? /^(\d{2}):(\d{2})/.exec(valor) : null

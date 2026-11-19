@@ -37,11 +37,11 @@ const nombre = `segmento-${useId()}`
       :key="String(o.value)"
       :class="[
         modelo === o.value ? 'bg-primary text-white shadow-xs' : 'text-on-surface hover:bg-surface-high',
-        disabled ? 'cursor-not-allowed opacity-60' : 'cursor-pointer',
+        disabled || o.disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer',
       ]"
       class="flex flex-1 items-center justify-center gap-1.5 rounded-stamp px-2 text-caption font-semibold transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-primary-container has-[:focus-visible]:ring-offset-1"
     >
-      <input v-model="modelo" type="radio" :name="nombre" :value="o.value" :disabled="disabled" class="sr-only" />
+      <input v-model="modelo" type="radio" :name="nombre" :value="o.value" :disabled="disabled || o.disabled" class="sr-only" />
       <img v-if="modelo === o.value" :src="check" alt="" width="13.33" height="13.33" />
       <span class="truncate">{{ o.label }}</span>
     </label>
